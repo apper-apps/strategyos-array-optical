@@ -15,7 +15,7 @@ export const useCompanyValidation = () => {
         if (!emailRegex.test(value)) return "Please enter a valid email";
         return "";
       case "contactPhone":
-        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+const phoneRegex = /^[+]?[1-9][\d]{0,15}$/;
         if (!value.trim()) return "Phone number is required";
         if (!phoneRegex.test(value.replace(/\D/g, ""))) return "Please enter a valid phone number";
         return "";
