@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { toast } from "react-toastify";
 import CompanyInfoForm from "@/components/organisms/CompanyInfoForm";
 import MarketingChannelSection from "@/components/organisms/MarketingChannelSection";
@@ -85,11 +85,10 @@ const Dashboard = () => {
     });
   };
 
-  // Check if export is allowed
-  const canExport = () => {
+// Memoized export validation to prevent infinite re-renders
+  const canExport = useMemo(() => {
     return validateAll(companyInfo) && Object.values(selectedChannels).some(Boolean);
-  };
-
+  }, [companyInfo, selectedChannels, validateAll]);
   // Generate PDF report
   const handleGeneratePDF = async () => {
     if (!canExport()) {
@@ -250,7 +249,7 @@ const Dashboard = () => {
               onSendWebhook={handleSendWebhook}
               isGeneratingPDF={isGeneratingPDF}
               isSendingWebhook={isSendingWebhook}
-              canExport={canExport()}
+canExport={canExport}
             />
           </div>
         </div>
