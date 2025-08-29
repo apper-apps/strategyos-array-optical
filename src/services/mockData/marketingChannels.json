@@ -1,0 +1,176 @@
+{
+  "trafficSources": [
+    {
+      "id": "google-ads",
+      "name": "Google Ads",
+      "icon": "Search",
+      "category": "paid-search"
+    },
+    {
+      "id": "facebook-ads",
+      "name": "Facebook Ads",
+      "icon": "Facebook",
+      "category": "social-media"
+    },
+    {
+      "id": "linkedin-ads",
+      "name": "LinkedIn Ads",
+      "icon": "Linkedin",
+      "category": "social-media"
+    },
+    {
+      "id": "tiktok-ads",
+      "name": "TikTok Ads",
+      "icon": "Video",
+      "category": "social-media"
+    },
+    {
+      "id": "seo",
+      "name": "SEO",
+      "icon": "TrendingUp",
+      "category": "organic"
+    },
+    {
+      "id": "content-marketing",
+      "name": "Content Marketing",
+      "icon": "FileText",
+      "category": "content"
+    },
+    {
+      "id": "email-marketing",
+      "name": "Email Marketing",
+      "icon": "Mail",
+      "category": "email"
+    },
+    {
+      "id": "direct-mail",
+      "name": "Direct Mail",
+      "icon": "Mailbox",
+      "category": "traditional"
+    },
+    {
+      "id": "trade-shows",
+      "name": "Trade Shows",
+      "icon": "Calendar",
+      "category": "events"
+    },
+    {
+      "id": "referrals",
+      "name": "Referrals",
+      "icon": "Users",
+      "category": "word-of-mouth"
+    },
+    {
+      "id": "cold-calling",
+      "name": "Cold Calling",
+      "icon": "Phone",
+      "category": "outbound"
+    },
+    {
+      "id": "influencer-marketing",
+      "name": "Influencer Marketing",
+      "icon": "Star",
+      "category": "social-media"
+    }
+  ],
+  "prospectFeed": [
+    {
+      "id": "website-analytics",
+      "name": "Website Analytics",
+      "icon": "BarChart3",
+      "category": "analytics"
+    },
+    {
+      "id": "crm-integration",
+      "name": "CRM Integration",
+      "icon": "Database",
+      "category": "systems"
+    },
+    {
+      "id": "email-tracking",
+      "name": "Email Tracking",
+      "icon": "MailOpen",
+      "category": "tracking"
+    },
+    {
+      "id": "social-monitoring",
+      "name": "Social Media Monitoring",
+      "icon": "MessageCircle",
+      "category": "social-media"
+    },
+    {
+      "id": "lead-scoring",
+      "name": "Lead Scoring",
+      "icon": "Target",
+      "category": "qualification"
+    },
+    {
+      "id": "intent-data",
+      "name": "Intent Data",
+      "icon": "Zap",
+      "category": "intelligence"
+    },
+    {
+      "id": "behavior-tracking",
+      "name": "Behavior Tracking",
+      "icon": "Activity",
+      "category": "analytics"
+    },
+    {
+      "id": "form-analytics",
+      "name": "Form Analytics",
+      "icon": "ClipboardList",
+      "category": "conversion"
+    },
+    {
+      "id": "chat-integration",
+      "name": "Live Chat Integration",
+      "icon": "MessageSquare",
+      "category": "engagement"
+    }
+  ],
+  "retargeting": [
+    {
+      "id": "facebook-pixel",
+      "name": "Facebook Pixel",
+      "icon": "Facebook",
+      "category": "social-media"
+    },
+    {
+      "id": "google-retargeting",
+      "name": "Google Ads Retargeting",
+      "icon": "Search",
+      "category": "search"
+    },
+    {
+      "id": "linkedin-retargeting",
+      "name": "LinkedIn Retargeting",
+      "icon": "Linkedin",
+      "category": "social-media"
+    },
+    {
+      "id": "email-retargeting",
+      "name": "Email Retargeting",
+      "icon": "Mail",
+      "category": "email"
+    },
+    {
+      "id": "display-ads",
+      "name": "Display Ads",
+      "icon": "Monitor",
+      "category": "display"
+    },
+    {
+      "id": "video-retargeting",
+      "name": "Video Retargeting",
+      "icon": "Play",
+      "category": "video"
+    },
+    {
+      "id": "programmatic-ads",
+      "name": "Programmatic Ads",
+      "icon": "Cpu",
+      "category": "programmatic"
+    }
+  ]
+}
