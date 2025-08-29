@@ -1,15 +1,15 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { toast } from "react-toastify";
+import { useMarketingChannels } from "@/hooks/useMarketingChannels";
+import { useCompanyValidation } from "@/hooks/useCompanyValidation";
+import { generateStrategyPDF } from "@/utils/pdfGenerator";
 import CompanyInfoForm from "@/components/organisms/CompanyInfoForm";
 import MarketingChannelSection from "@/components/organisms/MarketingChannelSection";
 import SystemScoreDisplay from "@/components/organisms/SystemScoreDisplay";
 import ActionPanel from "@/components/organisms/ActionPanel";
-import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
-import { useMarketingChannels } from "@/hooks/useMarketingChannels";
-import { useCompanyValidation } from "@/hooks/useCompanyValidation";
+import Loading from "@/components/ui/Loading";
 import marketingChannelService from "@/services/api/marketingChannelService";
-import { generateStrategyPDF } from "@/utils/pdfGenerator";
 
 const Dashboard = () => {
   const { channels, loading, error, refetch } = useMarketingChannels();
@@ -89,10 +89,10 @@ const Dashboard = () => {
   const canExport = useMemo(() => {
     return validateAll(companyInfo) && Object.values(selectedChannels).some(Boolean);
   }, [companyInfo, selectedChannels, validateAll]);
-  // Generate PDF report
+
   const handleGeneratePDF = async () => {
-    if (!canExport()) {
-      toast.error("Please complete company information and select at least one channel");
+    if (!canExport) {
+      toast.error('Please complete company information first');
       return;
     }
 
@@ -115,10 +115,9 @@ const Dashboard = () => {
     }
   };
 
-  // Send webhook data
-  const handleSendWebhook = async () => {
-    if (!canExport()) {
-      toast.error("Please complete company information and select at least one channel");
+const handleSendWebhook = async () => {
+    if (!canExport) {
+      toast.error('Please complete company information first');
       return;
     }
 
